@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+public class MobilePhone {
+   private String phonenumber;
+   private ArrayList<Contacts> myContacts;
+public MobilePhone(String phonenumber) {
+	
+	this.phonenumber = phonenumber;
+	this.myContacts = new ArrayList<>();
+}
+   
+   
+   
+}

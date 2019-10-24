@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+public class MainGrocery {
+
+
+	private static Scanner scan = new java.util.Scanner(System.in);
+	private static GroceryStore groceryStore = new GroceryStore();
+	public static void main(String[] args) {
+		boolean quit = false;
+		int choice = 0;
+		printChoice();
+		while(!quit) {
+			System.err.println("Enter your choice.");
+			switch(choice) {
+			case 0:
+				printChoice();
+				break;
+			case 1:
+				groceryStore.printItems();
+				break;
+			case 2:
+				addItem();
+				break;
+			case 3:
+				modifyItem();
+				break;
+			case 4:
+				removeItem();
+				break;
+
+			}
+
+
+		}
+
+	}
+	private static void removeItem() {
+		System.out.println("Please enter Item to be removed");
+		String item = scan.nextLine();
+		if(groceryStore.renoveItem(item)) {
+			System.out.println(item + " sucessfully removed");
+		}else {
+			System.out.println(item + " not found");
+		}
+
+	}
+	private static void modifyItem() {
+		System.out.println("Please enter Item to be modified");
+		String oldItem = scan.nextLine();
+		System.out.println("Please enter new Item ");
+		String newItem = scan.nextLine();
+		if(groceryStore.modifyItem(oldItem, newItem)) {
+			System.out.println(oldItem + " successfully replaced by "+ newItem);
+		}else {
+			System.out.println(oldItem + " Not found cannot be replaced ");
+		}
+	}
+	private static void addItem() {
+		System.out.println("Enter Item to be added");
+		String item = scan.nextLine();
+		if(groceryStore.addItem(item)) {
+			System.out.println(item + "successfully added");
+		}else {
+			System.out.println(item + " Not in the Grocery list");
+		}
+
+	}
+	private static void printChoice() {
+		System.out.println("\nPress");
+		System.out.println("0--> to print choice"
+				+"1--> to print Items"
+				+"2--> to add Items"
+				+"3--> to modify Items"
+				+"4--> to remove Items"
+				+"5--> to search Items"
+				+"6--> to quit application"
+				);
+
+	}
+}

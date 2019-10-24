@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\tkamg\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+340276306.index

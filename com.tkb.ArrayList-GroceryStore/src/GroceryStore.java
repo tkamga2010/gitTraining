@@ -1,0 +1,68 @@
+import java.util.ArrayList;
+
+public class GroceryStore {
+	private ArrayList<String> groceryStore = new ArrayList<String>();
+
+
+	public void printItems() {
+		for (int i = 0; i < groceryStore.size(); i++) {
+			System.out.println(i+1 +"----> "+ groceryStore.get(i));
+		}
+	}
+
+
+	//Internal private method to get position of the Item
+	private int getItemPosition(String item) {
+		return groceryStore.indexOf(item);
+	}
+
+
+	public boolean modifyItem(String oldItem, String newItem) {
+		int position = getItemPosition(oldItem);
+
+		if(position >= 0) {
+			groceryStore.set(position, newItem);
+			return true;
+		}
+		return false;
+	}
+
+
+	public boolean renoveItem(String item) {
+		int position = getItemPosition(item);
+		if(position>=0) {
+			groceryStore.remove(position);
+			return true;
+		}
+		return false;
+
+	}
+
+
+	public String searchItem(String searchItem) {
+		int position = getItemPosition(searchItem);
+		if(position>= 0) {
+			return groceryStore.get(position);
+		}
+
+		return null;
+	}
+
+
+	public boolean addItem(String item) {
+		
+		if(groceryStore.contains(item)) {	
+			return false;
+		}
+		groceryStore.add(item);
+		return true;
+	}
+	
+
+	
+
+
+	
+
+
+}

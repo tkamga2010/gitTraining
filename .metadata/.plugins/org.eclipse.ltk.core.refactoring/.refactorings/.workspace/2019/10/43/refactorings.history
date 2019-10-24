@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;com.tkb.ArrayList-LinkList&apos; to &apos;com.tkb.ArrayList-GroceryStore&apos;&#x0D;&#x0A;- Original element: &apos;com.tkb.ArrayList-LinkList&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tkb.ArrayList-LinkList&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;com.tkb.ArrayList-LinkList&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=com.tkb.ArrayList-LinkList" name="com.tkb.ArrayList-GroceryStore" references="true" stamp="1571932550379" version="1.0"/>
+</session>
